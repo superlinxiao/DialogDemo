@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         AlertDialog dialog = builder.create();
         Window window = dialog.getWindow();
+        //先show之后，再setContentView，不然可能会被show里面view覆盖，导致展示不出来
         dialog.show();
         if (window != null) {
             window.setContentView(R.layout.dialog_test);
